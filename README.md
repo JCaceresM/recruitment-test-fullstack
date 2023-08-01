@@ -11,37 +11,43 @@
 
 # Recruitment Test for Full Stack Position
 
+Welcome to the recruitment test for the Full Stack position at our company! The test aims to assess your programming skills, problem-solving abilities, and understanding of web development concepts. Please read the instructions for each task carefully before starting.
+
+## Keep in mind
 - Please use real Github accounts, we want to check your contributions history. Since we use, create, and contribute to open source.
 - Everyone work with the same set of information, to let us fairly judge your work.
 - We are answering questions only when it's strictly necessary.
 - The test is designed in a way, that can confuse you or seems weird because we want to test you in a way worse environment than you will work on a daily basis. It's also not a representation of the tech stack we are using in real projects.
-- You need to create a repository on GitHub to commit your changes and share the repository URL with us when you are done.
+
 
 ## Before you start
 
-- Fork this repository, it needs to stay on Github, publicly available.
-- Take in mind the User Experience UX. We are evaluating the usability of the user interface.
-- Be sure all the assets are in the project before sending.
+- Fork this repository to create your own copy on GitHub. Keep it publicly available.
+- Complete each task in its designated folder and provide clear instructions on how to run your code.
+- Take into account User Experience (UX) and ensure the user interface is usable and responsive.
+- Include all assets and resources necessary to run your project.
 
-## Task 1
+## Task 1 - Fundamental Programming
+Write a function to reverse the elements of a given array while keeping special characters in their original positions. The function should handle dynamic changes in the array and special character positions. For example:
 
-From the following array, reverse it, but keep the special characters in the same position.
-
+Input:
+```js
+['n', 2, '&', 'a', 'l', 9, '$', 'q', 47, 'i', 'a', 'j', 'b', 'z', '%', 8]
 ```
-[n,2,&,a,l,9,$,q,47,i,a,j,b,z,%,8]
+
+Expected Output:
+```js
+[8, 'z', '&', 'b', 'j', 'a', '$', 'i', 47, 'q', 9, 'l', 'a', 2, '%', 'n']
 ```
 
-In this case:
+**Note:**
+```diff
+- The solution needs to be dynamic (if the special character's position changed, keep it as same).
+```
 
-- `&` must be in position 2
-- `$` must be in position 6
-- `%` must be in position 14
+## Task 2 - Fetch Data from API
 
-The solution needs to be dynamic (if the special character's position changed, keep it as same).
-
-## Task 2
-
-From the Dog API fetch the following data:
+Create a web page that fetches data from the [Dog API](https://dog.ceo/dog-api/), display the following information:
 
 - List all the dog breeds
 - Show the dog image and name
@@ -51,28 +57,45 @@ From the Dog API fetch the following data:
 
 ![Task 2](/assets/task_2.jpg)
 
-Mockup for Dog API
+Mockup for Dog API | API: https://dog.ceo/dog-api/
 
 The grid needs to be responsive.
 
-## Task 3
+## Task 3 - User Authentication and Product Display
 
-1 - Given the input data on a form, store the fields with multiple values in a database, please be sure to validate the form as well, input data must include:
+Create a web application for managing products with user authentication. The application should have the following features:
 
-- Product Name
-- Price
-- Description
-- Product Image (not URL)
+1. User Registration and Login: Users should be able to register and log in to the application. (Keep in mind the good practices and security measures).
+2. Product Management: Only `Authenticated users` can add new products with the following details: Product Name, Price, Description, and Product Image (not URL).
+3. Product Carousel: Display a carousel of product images and names based on the provided design mockup.
 
-2 - Create a user login and validate the user session
+**Important**: `The carousel should only be accessible to logged-in users`.
 
-3 - Read the database table data and show the product information to the logged-in user only
-
-4 - The product layout must be as a carousel of product list based on the mockup design below:
 
 ![Task 3](/assets/task_3.jpg)
 
-You may use whatever you like to solve these problems Good luck 🤗
+## Evaluation
+
+We will evaluate your solutions based on the following criteria:
+- Code quality and readability.
+- Functionality and correctness of the implemented tasks.
+- User Experience (UX) design in Task 2 and Task 3.
+- Proper validation and error handling.
+
+### Extra Points
+
+You can earn extra points by implementing the following features:
+- Unit tests for the implemented tasks.
+- Dockerizing the application.
+- Deploying the application to a cloud platform (e.g., Vercel, AWS, etc.).
+- Using a modern JavaScript framework (e.g., React, Vue, etc.) for Task 2 & Task 3.
+
+
+## Submission
+
+When you have completed the tasks, share the repository URL with us via email. Please ensure that the repository remains publicly accessible.
+
+Good luck! We look forward to reviewing your work. 🤗
 
 ## About
 
