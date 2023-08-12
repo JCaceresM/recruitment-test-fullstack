@@ -1,0 +1,37 @@
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100vw;
+  overflow: hidden;
+  margin: 0 auto;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+      z-index: 999;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}

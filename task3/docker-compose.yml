@@ -1,0 +1,48 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    container_name: task3-postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_DB=task3
+      - POSTGRES_PASSWORD=pass
+    ports:
+      - 5433:5432
+    healthcheck:
+      test: nc -z localhost 5433
+    networks:
+      - task3Net
+
+  server:
+    build:
+      context: ./server 
+    ports:
+      - '3001:3001' 
+    environment:
+      - APP_PORT=3001
+      - PG_CONNECTION_STRING=postgres://user:pass@db:5432/task3
+      - JWT_SECRET='secrect'
+    depends_on:
+      - db
+    networks:
+      - task3Net
+
+  client:
+    build:
+      context: ./client 
+    ports:
+      - '8080:3008' 
+    environment:
+      - SERVICE_PORT= 3008
+      - VITE_REACT_APP_API_URL= http://localhost:3001/
+    depends_on:
+      - server
+      - db
+    networks:
+      - task3Net
+      
+
+networks:
+  task3Net:
